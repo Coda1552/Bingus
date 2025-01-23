@@ -2,6 +2,7 @@ package codyhuh.bingus.common.entities;
 
 import codyhuh.bingus.common.entities.goal.MousePanicGoal;
 import codyhuh.bingus.registry.ModEntities;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -76,6 +77,10 @@ public class Mouse extends Animal {
     @Override
     public void tick() {
         super.tick();
+
+        if (getVehicle() instanceof Cat cat) {
+            lookAt(EntityAnchorArgument.Anchor.EYES, position().add(0.0D, getBbHeight(), 0.0D));
+        }
 
         if (getFleeingTicks() > 0 && isFleeing()) {
             setFleeingTicks(getFleeingTicks() - 1);

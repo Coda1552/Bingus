@@ -30,22 +30,30 @@ public class CarriedMouseLayer<T extends Mob, M extends OcelotModel<T>> extends 
 
         if (entity.isVehicle()) {
             for (Entity passenger : entity.getPassengers()) {
-                if (!(passenger instanceof Mouse)) return;
+                if (passenger instanceof Mouse mouse) {
+                    BingusMod.PROXY.releaseRenderingEntity(mouse.getUUID());
 
-                BingusMod.PROXY.releaseRenderingEntity(passenger.getUUID());
-                poseStack.pushPose();
+                    poseStack.pushPose();
 
-                ModelPart head = getParentModel().head;
+                    ModelPart head = getParentModel().head;
 
-                double y = passenger.getBbHeight() - 1.5D;
-                poseStack.translate(0.0D, y, 0.0D);
-                head.translateAndRotate(poseStack);
-                System.out.println("nuts");
-                poseStack.mulPose(Axis.XN.rotationDegrees(180F));
-                poseStack.mulPose(Axis.YN.rotationDegrees(360F - bodyYaw));
-                renderPassenger(passenger, 0, partialTicks, poseStack, pBuffer, pPackedLight);
-                poseStack.popPose();
-                BingusMod.PROXY.blockRenderingEntity(passenger.getUUID());
+                    double y = mouse.getBbHeight() + 0.1;
+
+                    head.translateAndRotate(poseStack);
+
+                    poseStack.translate(0.0D, y, -0.185D);
+
+                    poseStack.mulPose(Axis.XN.rotationDegrees(90F));
+                    poseStack.mulPose(Axis.ZP.rotationDegrees(90F));
+                    poseStack.mulPose(Axis.YN.rotationDegrees(360F - bodyYaw));
+
+                    poseStack.scale(0.75F, 0.75F, 0.75F);
+                    renderPassenger(mouse, 0, partialTicks, poseStack, pBuffer, pPackedLight);
+
+                    poseStack.popPose();
+
+                    BingusMod.PROXY.blockRenderingEntity(mouse.getUUID());
+                }
             }
 
         }
