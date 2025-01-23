@@ -37,7 +37,7 @@ public class CarriedMouseLayer<T extends Mob, M extends OcelotModel<T>> extends 
 
                     ModelPart head = getParentModel().head;
 
-                    double y = mouse.getBbHeight() + 0.1;
+                    double y = mouse.getBbHeight() + 0.1D;
 
                     head.translateAndRotate(poseStack);
 
