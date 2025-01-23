@@ -106,7 +106,7 @@ public class Mouse extends Animal {
         return super.hurt(source, amount);
     }
 
-    // todo - figure out a better way to stop mice from controlling cats they are currently riding, the method below makes (any entity) with a mouse passenger their AI entirely
+    // todo - figure out a better way to stop mice from controlling cats they are currently riding, the method below makes (any entity) with a mouse passenger stop their AI entirely
     @Override
     public boolean isEffectiveAi() {
         return super.isEffectiveAi() && !isPassenger();
