@@ -37,7 +37,7 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 
 public class Glumboss extends PathfinderMob {
-    private final ServerBossEvent bossEvent = (new ServerBossEvent(this.getDisplayName(), BossEvent.BossBarColor.WHITE, BossEvent.BossBarOverlay.PROGRESS));
+    private final ServerBossEvent bossEvent = (ServerBossEvent) new ServerBossEvent(this.getDisplayName(), BossEvent.BossBarColor.WHITE, BossEvent.BossBarOverlay.PROGRESS).setDarkenScreen(true);
     private static final EntityDataAccessor<Integer> ANIM_STATE = SynchedEntityData.defineId(Glumboss.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Boolean> HALF_HEALTH = SynchedEntityData.defineId(Glumboss.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> CHARGED = SynchedEntityData.defineId(Glumboss.class, EntityDataSerializers.BOOLEAN);
