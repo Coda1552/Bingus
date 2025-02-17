@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:shears"
+    },
+    "title": {
+      "translate": "advancements.glumbis.shear_a_cat.title"
+    },
+    "description": {
+      "translate": "advancements.glumbis.shear_a_cat.desc"
+    }
+  },
+  "parent": "minecraft:husbandry/tame_an_animal",
+  "criteria": {
+    "shear": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "tag": "forge:shears"
+        },
+        "entity": {
+          "type": "minecraft:cat"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shear"
+    ]
+  ]
+}
