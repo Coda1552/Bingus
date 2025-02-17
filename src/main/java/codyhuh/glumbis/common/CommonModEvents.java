@@ -1,6 +1,7 @@
 package codyhuh.glumbis.common;
 
 import codyhuh.glumbis.GlumbisMod;
+import codyhuh.glumbis.common.entities.Glumboss;
 import codyhuh.glumbis.common.entities.Mouse;
 import codyhuh.glumbis.registry.ModEntities;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -13,5 +14,6 @@ public class CommonModEvents {
     @SubscribeEvent
     public static void createAttributes(EntityAttributeCreationEvent e) {
         e.put(ModEntities.MOUSE.get(), Mouse.createMouseAttributes().build());
+        e.put(ModEntities.GLUMBOSS.get(), Glumboss.createGlumbossAttributes().build());
     }
 }

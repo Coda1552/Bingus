@@ -1,8 +1,10 @@
 package codyhuh.glumbis.client;
 
 import codyhuh.glumbis.GlumbisMod;
+import codyhuh.glumbis.client.models.GlumbossModel;
 import codyhuh.glumbis.client.models.MouseModel;
 import codyhuh.glumbis.client.particle.StaticElectricityParticle;
+import codyhuh.glumbis.client.renders.GlumbossRenderer;
 import codyhuh.glumbis.client.renders.MouseRenderer;
 import codyhuh.glumbis.client.renders.layers.CarriedMouseLayer;
 import codyhuh.glumbis.registry.ModEntities;
@@ -39,11 +41,13 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerRenders(EntityRenderersEvent.RegisterRenderers e) {
         e.registerEntityRenderer(ModEntities.MOUSE.get(), MouseRenderer::new);
+        e.registerEntityRenderer(ModEntities.GLUMBOSS.get(), GlumbossRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions e) {
         e.registerLayerDefinition(MouseModel.LAYER_LOCATION, MouseModel::createBodyLayer);
+        e.registerLayerDefinition(GlumbossModel.LAYER_LOCATION, GlumbossModel::createBodyLayer);
     }
 
     @SubscribeEvent(priority = EventPriority.LOWEST)

@@ -2,9 +2,10 @@
   "itemGroup.glumbis": "Glumbis",
 
   "entity.glumbis.mouse": "Mouse",
-  "entity.glumbis.pinky": "Pinky",
+  "entity.glumbis.glumboss": "Glumboss",
 
   "item.glumbis.mouse_spawn_egg": "Mouse Spawn Egg",
+  "item.glumbis.glumboss_spawn_egg": "Glumboss Spawn Egg",
 
   "advancements.glumbis.shear_a_cat.desc": "Shear a Cat to obtain a hairless Cat",
   "advancements.glumbis.shear_a_cat.title": "Only One Way to Shear a Cat"

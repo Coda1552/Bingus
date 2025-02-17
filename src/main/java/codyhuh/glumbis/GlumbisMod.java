@@ -2,9 +2,7 @@ package codyhuh.glumbis;
 
 import codyhuh.glumbis.client.ClientProxy;
 import codyhuh.glumbis.common.CommonProxy;
-import codyhuh.glumbis.registry.ModCatVariants;
-import codyhuh.glumbis.registry.ModEntities;
-import codyhuh.glumbis.registry.ModItems;
+import codyhuh.glumbis.registry.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -22,6 +20,9 @@ public class GlumbisMod {
         ModCatVariants.VARIANTS.register(bus);
         ModEntities.ENTITIES.register(bus);
         ModItems.ITEMS.register(bus);
+        ModParticles.PARTICLES.register(bus);
+        ModSounds.SOUNDS.register(bus);
+        ModCreativeTabs.CREATIVE_TABS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

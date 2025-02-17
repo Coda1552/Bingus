@@ -15,6 +15,6 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<Mouse>> MOUSE = ENTITIES.register("mouse", () -> EntityType.Builder.of(Mouse::new, MobCategory.CREATURE).sized(0.25F, 0.25F).build("mouse"));
 
-    public static final RegistryObject<EntityType<Glumboss>> GLUMBOSS = ENTITIES.register("glumboss", () -> EntityType.Builder.of(Glumboss::new, MobCategory.MONSTER).sized(1.5f, 2.95f).build("glumboss"));
+    public static final RegistryObject<EntityType<Glumboss>> GLUMBOSS = ENTITIES.register("glumboss", () -> EntityType.Builder.of(Glumboss::new, MobCategory.MONSTER).sized(2.4f, 3.8f).build("glumboss"));
     public static final RegistryObject<EntityType<Glump>> GLUMP = ENTITIES.register("glump", () -> EntityType.Builder.of(Glump::new, MobCategory.MONSTER).sized(0.6f, 0.9f).build("glump"));
 }

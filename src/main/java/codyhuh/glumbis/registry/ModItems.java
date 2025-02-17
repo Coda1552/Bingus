@@ -12,6 +12,6 @@ public class ModItems {
 
     // Misc.
     public static final RegistryObject<Item> MOUSE_SPAWN_EGG = ITEMS.register("mouse_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.MOUSE, 0x717272, 0xffa9a9, new Item.Properties()));
-    public static final RegistryObject<Item> GLUMBOSS_SPAWN_EGG = ITEMS.register("glumboss_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.GLUMBOSS, 0xfbfcfc, 0xfff167, new Item.Properties()));
+    public static final RegistryObject<Item> GLUMBOSS_SPAWN_EGG = ITEMS.register("glumboss_spawn_egg", () -> new ForgeSpawnEggItem(ModEntities.GLUMBOSS, 0xc2c5c6, 0xd57c71, new Item.Properties()));
 
 }
